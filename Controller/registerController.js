@@ -25,15 +25,16 @@ const isValidFields = () => {
     return document.getElementById('formCadastro').reportValidity()
 }
 
-const saveCliente = () => {
+const saveCliente = (event) => {
+    event.preventDefault();
     if (isValidFields()) {
         const client =  {
-            name: document.getElementById('nome').value,
-            email: document.getElementById('email').value,
-            user: document.getElementById('usuario').value,
-            city: document.getElementById('cidade').value,
-            password: document.getElementById('senha').value,
-            confirmpassword: document.getElementById('confirmaSenha').value
+            name: document.getElementById('nome').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            user: document.getElementById('usuario').value.trim(),
+            city: document.getElementById('cidade').value.trim(),
+            password: document.getElementById('senha').value.trim(),
+            confirmpassword: document.getElementById('confirmarSenha').value.trim()
         }
 
         if (client.password !== client.confirmpassword) {
