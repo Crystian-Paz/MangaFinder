@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="../View/styles/profile.css">
+</head>
+<body>
+    <h1>Meu Perfil</h1>
+    <div id="perfilData">
+        <!-- Modo View -->
+        <div class="view-mode">
+            <p><strong>Nome:</strong> <span id="viewNome"></span></p>
+            <p><strong>Usuário:</strong> <span id="viewUsuario"></span></p>
+            <p><strong>País:</strong> <span id="viewPais"></span></p>
+            <p><strong>Email:</strong> <span id="viewEmail"></span></p>
+            <button id="btnEditar">Editar Perfil</button>
+        </div>
+
+        <!-- Modo Edit -->
+        <div class="edit-mode">
+            <p><strong>Nome:</strong> <input type="text" id="editNome"></p>
+            <p><strong>Usuário:</strong> <input type="text" id="editUsuario"></p>
+            <p><strong>País:</strong> <input type="text" id="editPais"></p>
+            <p><strong>Email:</strong> <input type="email" id="editEmail"></p>
+            <button id="btnSalvar">Salvar</button>
+            <button id="btnCancelar">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="../Controller/profileController.js"></script>
+
+</body>
+</html>

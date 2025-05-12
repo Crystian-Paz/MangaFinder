@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/home.css">
+    <title>MangáFinder</title>
+</head>
+<body>
+    <header id="header">
+        <ul>
+            <li>Login</li>
+            <li>Registrar</li>
+        </ul>
+    </header>
+    <h1>Criar conta</h1>
+    <div class="FormCard">
+        <form id="formCadastro">
+            <input type="text" class="formsBoxStyle" id="nome" placeholder="Nome" required>
+            <input type="email" class="formsBoxStyle" id="email" placeholder="Email" required>
+            <input type="text" class="formsBoxStyle" id="usuario" placeholder="Usuário" required>
+            <input type="text" class="formsBoxStyle" id="pais" placeholder="País" required>
+            <input type="password" class="formsBoxStyle" id="senha" placeholder="Senha" required>
+            <input type="password" class="formsBoxStyle" id="confirmarSenha" placeholder="Confirmar Senha" required>
+            <a href="../View/perfil.html"><input type="submit" id="buttonCadastrar" value="Enviar"></a>
+        </form>
+    </div>
+    <script src="../Controller/registerController.js"></script>
+</body>
+</html>
