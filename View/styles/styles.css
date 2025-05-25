@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('https://www.opovo.com.br/_midias/jpg/2022/05/11/750x500/1_animes_japoneses_entenda_o_que_sao_e_o_porque_de_fazerem_tanto_sucesso-18726989.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    color: white;
+    margin: 40px 0;
+}
+
+table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.acoes button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.editar {
+    background-color: #ffc107;
+}
+
+.excluir {
+    background-color: #dc3545;
+    color: white;
+}
+
+#busca {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+}
