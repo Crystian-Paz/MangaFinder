@@ -18,7 +18,7 @@ const saveCliente = (event) => {
             name: document.getElementById('nome').value.trim(),
             email: document.getElementById('email').value.trim(),
             user: document.getElementById('usuario').value.trim(),
-            country: document.getElementById('pais').value.trim(),
+            country: document.getElementById('cidade').value.trim(),
             password: document.getElementById('senha').value.trim(),
             confirmpassword: document.getElementById('confirmarSenha').value.trim()
         };
