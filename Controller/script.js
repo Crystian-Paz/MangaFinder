@@ -1,32 +1,32 @@
-const CHAVE_USUARIOS = 'usuarios_cadastrados';
+const db_client = 'db_client';
 
 function carregarDados() {
-    const dadosSalvos = localStorage.getItem(CHAVE_USUARIOS);
-    return dadosSalvos ? JSON.parse(dadosSalvos) : [
-        { id: 1, nome: "Kaique lemos", email: "Kaique@email.com" },
-        { id: 2, nome: "Kaio lemos", email: "kaiolemos@email.com" },
-        { id: 3, nome: "Cauã Verissimo", email: "Cauã@email.com" },
-        { id: 4, nome: "Matheus Hustenir", email: "Matheus@email.com" }
+    const dbClient = localStorage.getItem(db_client);
+    return dbClient ? JSON.parse(dbClient) : [
+        { name: "Kaique lemos", email: "Kaique@email.com" },
+        { name: "Kaio lemos", email: "kaiolemos@email.com" },
+        { name: "Cauã Verissimo", email: "Cauã@email.com" },
+        { name: "Matheus Hustenir", email: "Matheus@email.com" }
     ];
 }
 
 function salvarDados(usuarios) {
-    localStorage.setItem(CHAVE_USUARIOS, JSON.stringify(usuarios));
+    localStorage.setItem(db_client, JSON.stringify(usuarios));
 }
 
 function carregarUsuarios(lista = carregarDados()) {
     const corpoTabela = document.getElementById('corpo-tabela');
     corpoTabela.innerHTML = '';
 
-    lista.forEach(usuario => {
+    lista.forEach((usuario, index) => {
         const linha = document.createElement('tr');
         linha.innerHTML = `
-            <td>${usuario.id}</td>
-            <td>${usuario.nome}</td>
+            <td>${index + 1}</td>
+            <td>${usuario.name}</td>
             <td>${usuario.email}</td>
             <td class="acoes">
-                <button class="editar" onclick="editarUsuario(${usuario.id})">Editar</button>
-                <button class="excluir" onclick="excluirUsuario(${usuario.id})">Excluir</button>
+                <button class="editar" onclick="editarUsuario(${index})">Editar</button>
+                <button class="excluir" onclick="excluirUsuario(${index})">Excluir</button>
             </td>
         `;
         corpoTabela.appendChild(linha);
@@ -36,34 +36,35 @@ function carregarUsuarios(lista = carregarDados()) {
 function filtrarUsuarios() {
     const termo = document.getElementById('busca').value.toLowerCase();
     const usuariosFiltrados = carregarDados().filter(usuario =>
-        usuario.nome.toLowerCase().includes(termo)
+        usuario.name.toLowerCase().includes(termo)
     );
     carregarUsuarios(usuariosFiltrados);
 }
 
-function editarUsuario(id) {
+function editarUsuario(index) {
     const usuarios = carregarDados();
-    const usuario = usuarios.find(u => u.id === id);
-    
-    const novoNome = prompt("Editar nome:", usuario.nome);
+    const usuario = usuarios[index];
+
+    const novoNome = prompt("Editar nome:", usuario.name);
     const novoEmail = prompt("Editar email:", usuario.email);
 
     if (novoNome && novoEmail) {
-        usuario.nome = novoNome;
+        usuario.name = novoNome;
         usuario.email = novoEmail;
         salvarDados(usuarios);
         carregarUsuarios();
     }
 }
 
-function excluirUsuario(id) {
+function excluirUsuario(index) {
     if (confirm('Tem certeza que deseja excluir este usuário?')) {
         const usuarios = carregarDados();
-        const usuariosAtualizados = usuarios.filter(u => u.id !== id);
-        salvarDados(usuariosAtualizados);
+        usuarios.splice(index, 1);
+        salvarDados(usuarios);
         carregarUsuarios();
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    carregarUsuarios(); });
+    carregarUsuarios();
+});

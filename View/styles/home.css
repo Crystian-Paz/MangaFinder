@@ -1,0 +1,79 @@
+body {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background: #3f3e3e;
+    margin: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('imagem.png')
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;   
+    
+    border-radius: 100px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 400px;
+    border-radius: 100px
+  
+}
+
+input:hover {
+    background-color: rgb(78, 76, 76);
+    color: white;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 100px
+}
+
+button:hover {
+    background-color: rgb(78, 76, 76);
+    color: white;
+}
+ 
+.mensagem-erro{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    text-align: center;
+    color: rgb(77, 74, 74);
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mangas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.manga-box {
+    background: rgb(236, 236, 236);
+    border: 1px solid #f0ecec;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.manga-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.manga-box h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+
