@@ -2,12 +2,7 @@ const db_client = 'db_client';
 
 function carregarDados() {
     const dbClient = localStorage.getItem(db_client);
-    return dbClient ? JSON.parse(dbClient) : [
-        { name: "Kaique lemos", email: "Kaique@email.com" },
-        { name: "Kaio lemos", email: "kaiolemos@email.com" },
-        { name: "Cauã Verissimo", email: "Cauã@email.com" },
-        { name: "Matheus Hustenir", email: "Matheus@email.com" }
-    ];
+    return dbClient ? JSON.parse(dbClient) : [];
 }
 
 function salvarDados(usuarios) {
@@ -45,16 +40,13 @@ function editarUsuario(index) {
     const usuarios = carregarDados();
     const usuario = usuarios[index];
 
-    const novoNome = prompt("Editar nome:", usuario.name);
-    const novoEmail = prompt("Editar email:", usuario.email);
+    
+    localStorage.setItem('usuarioEditando', JSON.stringify(usuario));
 
-    if (novoNome && novoEmail) {
-        usuario.name = novoNome;
-        usuario.email = novoEmail;
-        salvarDados(usuarios);
-        carregarUsuarios();
-    }
+    
+    window.location.href = 'perfil.html';
 }
+
 
 function excluirUsuario(index) {
     if (confirm('Tem certeza que deseja excluir este usuário?')) {
