@@ -6,48 +6,84 @@
 }
 
 body{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://cdn.discordapp.com/attachments/1356623149516591154/1381044205324861563/imagem.png?ex=68461525&is=6844c3a5&hm=667b2539ab3fbcf55c73f7cbd4cc418643950f66d6ca062c8f1bef7410279b74&');
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://media.discordapp.net/attachments/709477703543160832/1381319176924303450/Design_sem_nome4.jpg?ex=6847153b&is=6845c3bb&hm=fdbb51c0900d19bc9a584455f849db02219cd3bad06af5825bbb73553d2de18b&=&format=webp&width=1378&height=775');
+}
+
+.viewNome{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 
 .view-mode, .edit-mode {
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+.edit-mode{
+    display: none;
 }
 
 .perfilData {
     margin-top: 20vh;
     margin-bottom: 20vh;
     display: flex;
-    align-items: center;
+    align-items:center;
     flex-direction: column;
-    justify-content: start;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+}
+
+.imagem-perfil{
+    width: 200px;
+    height: 200px;
+    object-fit:cover;
+    border-radius: 100%;
+    padding: 15px; 
 }
 
 .perfilData h1 {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
-.edit-mode {
-    display: none;
+.extrainfo {
+    color: rgb(205, 205, 205);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 8px;
 }
+
 
 input {
     width: 100%;
     padding: 8px;
     margin: 5px 0;
+
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+       padding: 10px 15px;
+    background-color: rgb(255, 174, 0);
     color: white;
     border: none;
     cursor: pointer;
     margin-right: 10px;
+    border-radius: 10px;
+
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgb(214, 147, 1);
 }
+
+#btnEditar{
+    padding: 10px 15px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 20px;
+}
+    
+    
 
 :root {
     --cor-header: #0D0D0D;
@@ -71,7 +107,7 @@ button:hover {
 .logo img {
     display: flex;
     justify-content: start;
-    width: 4vw;
+    width: 7vw;
     margin-right: 1vw;
 }
 
@@ -103,6 +139,7 @@ button:hover {
     color: black;
     border-radius: 0.2rem;
     padding: 0.2rem;
+    transition: 0.3s;
 }
 
 .links ul{
