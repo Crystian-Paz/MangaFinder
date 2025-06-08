@@ -1,28 +1,226 @@
- body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .view-mode, .edit-mode {
-            margin-bottom: 15px;
-        }
-        .edit-mode {
-            display: none;
-        }
-        input {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://cdn.discordapp.com/attachments/1356623149516591154/1381044205324861563/imagem.png?ex=68461525&is=6844c3a5&hm=667b2539ab3fbcf55c73f7cbd4cc418643950f66d6ca062c8f1bef7410279b74&');
+}
+
+.view-mode, .edit-mode {
+    color: white;
+}
+
+.perfilData {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.perfilData h1 {
+    color: white;
+}
+
+.edit-mode {
+    display: none;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+:root {
+    --cor-header: #0D0D0D;
+    --font-color-header: #F2F2F2;
+    --font-color-title-registre: #F2F2F2;
+    --box-title: #000000;
+    --box-forms: #BFBFBF;
+    --box-shadow: #bfbfbf21;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'inter', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 3vw;
+    margin-right: 30vw;
+}
+
+.logo img {
+    display: flex;
+    justify-content: start;
+    width: 4vw;
+    margin-right: 1vw;
+}
+
+.headerBox {
+    background: black;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: var(--font-color-header);
+    border-bottom: 1vh solid var(--box-shadow);
+}
+
+.links{
+    padding: 1rem;
+    border: 0.3rem solid white;
+    border-radius: 1rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+.links a:hover {
+    font-size: 2.8vh;
+    background-color: white;
+    color: black;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+}
+
+.links ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 4rem;
+    list-style: none; 
+    font-weight: 800;
+    font-style: italic;
+    
+}
+
+.footerbox {
+    margin-top: 10vh;
+    width: 100%;
+    height: 35vh;
+    background: black;
+    color: white;
+    border-top: 0.5rem solid var(--box-shadow);
+}
+
+.conteudofooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 2vh;
+}
+
+.criado {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 0.2rem solid white;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.sobre a {
+    color: white;
+}
+
+.sobre a:hover {
+    color: black;
+    background-color: white;
+    font-style: italic;
+}
+
+.sobregit {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    border: 0.2rem solid white;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.sobregit a {
+    padding: 1.5rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.sobregit a:hover {
+    background-color: white;
+    border-radius: 0.5rem;
+    color: #000000;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: row;
+    margin-left: 2vw;
+    margin-right: 2.5vw;
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 10vw;
+    margin-right: 0.5rem;
+  }
+
+  .headerBox {
+    flex-direction: row;
+    height: auto;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .links ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .footerbox {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .conteudofooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sobregit a {
+    padding: 1rem;
+    text-align: center;
+  }
+}

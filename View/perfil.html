@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="../View/styles/profile.css">
 </head>
 <body>
-    <h1>Meu Perfil</h1>
-    <div id="perfilData">
+    <header id="header">
+        <div class="headerBox">
+            <div class="logo">  
+                <img src="./assets/mangafinderlogo.png" alt="">
+                <h1>MangáFinder</h1>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Registrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="perfilData" class="perfilData">
+        <h1>Meu Perfil</h1>
         <!-- Modo View -->
         <div class="view-mode">
             <p><strong>Nome:</strong> <span id="viewNome"></span></p>
@@ -28,8 +43,27 @@
             <button id="btnCancelar">Cancelar</button>
         </div>
     </div>
-
+    <footer>
+        <div class="footerbox">
+            <div class="conteudofooter">
+                <div class="sobre">
+                    <h1>Sobre Nós</h1>  
+                    <a href="https://github.com/Crystian-Paz"></a>
+                    <a href="https://github.com/Neoxepa">Perfil Guilherme</a>
+                    <a href="https://github.com/MHustenir">Perfil Matheus Hustenir</a>
+                    <a href="https://github.com/Mathezoarxxa">Perfil Matheus</a>
+                    <a href="https://github.com/Kaique-Lemos">Perfil Kaique</a>
+                    <a href="https://github.com/Kc1fer">Perfil Cauã</a>
+                    <a href="https://github.com/DEGUSTEBR">Perfil Bruno</a>
+                </div>
+                <div class="sobregit">
+                    <h1>Github</h1>
+                    <a href="https://github.com/Crystian-Paz/MangaFinder">Link do Projeto</a>
+                </div>
+            </div>
+            <h1 class="criado">Site Criado por Jambrolhados</h1>
+        </div>
+    </footer>
     <script src="../Controller/profileController.js"></script>
-
 </body>
 </html>

@@ -4,36 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>MangáFinder</title>
 </head>
 <body>
     <header id="header">
         <div class="headerBox">
-            <div>
-                <img src="" alt="">
+            <div class="logo">  
+                <img src="./assets/mangafinderlogo.png" alt="">
                 <h1>MangáFinder</h1>
             </div>
             <div class="links">
                 <ul>
-                    <li>Home</li>
-                    <li>Login</li>
-                    <li>Registrar</li>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Registrar</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <h1>Criar conta</h1>
-    <div class="FormCard">
-        <form id="formCadastro">
-            <input type="text" class="formsBoxStyle" id="nome" placeholder="Nome" required>
-            <input type="email" class="formsBoxStyle" id="email" placeholder="Email" required>
-            <input type="text" class="formsBoxStyle" id="usuario" placeholder="Usuário" required>
-            <input type="text" class="formsBoxStyle" id="pais" placeholder="pais" required>
-            <input type="password" class="formsBoxStyle" id="senha" placeholder="Senha" required>
-            <input type="password" class="formsBoxStyle" id="confirmarSenha" placeholder="Confirmar Senha" required>
-            <input type="submit" id="buttonCadastrar" value="Enviar">
-        </form>
-    </div>
+    <content>
+        <div class="boxtitle">
+            <h1>Criar conta</h1>
+        </div>
+        <div class="FormCard">
+            <div class="formCadastro">
+                <form id="formCadastro">
+                    <div class="forminfo">
+                        <h2>Nome</h2>
+                        <input type="text" class="formsBoxStyle" id="nome" placeholder="Insira seu Nome" required>
+                        <h2>Email</h2>
+                        <input type="email" class="formsBoxStyle" id="email" placeholder="Insira seu Email" required>
+                        <h2>Usuário</h2>
+                        <input type="text" class="formsBoxStyle" id="usuario" placeholder="Insira seu Nome de Usuário" required>
+                        <h2>Cidade</h2>
+                        <input type="text" class="formsBoxStyle" id="cidade" placeholder="Insira seu Cidade" required>
+                        <h2>Senha</h2>
+                        <input type="password" class="formsBoxStyle" id="senha" placeholder="Insira sua Senha" required>
+                        <h2>Confirmar Senha</h2>
+                        <input type="password" class="formsBoxStyle" id="confirmarSenha" placeholder="Confirme sua Senha" required>
+                    </div>
+                    <div>
+                        <input type="submit" id="buttonCadastrar" value="CRIAR CONTA">
+                    </div>
+            </div>
+        </div>
+    </content>
+    <footer>
+        <div class="footerbox">
+            <div class="conteudofooter">
+                <div class="sobre">
+                    <h1>Sobre Nós</h1>  
+                    <a href="https://github.com/Crystian-Paz"></a>
+                    <a href="https://github.com/Neoxepa">Perfil Guilherme</a>
+                    <a href="https://github.com/MHustenir">Perfil Matheus Hustenir</a>
+                    <a href="https://github.com/Mathezoarxxa">Perfil Matheus</a>
+                    <a href="https://github.com/Kaique-Lemos">Perfil Kaique</a>
+                    <a href="https://github.com/Kc1fer">Perfil Cauã</a>
+                    <a href="https://github.com/DEGUSTEBR">Perfil Bruno</a>
+                </div>
+                <div class="sobregit">
+                    <h1>Github</h1>
+                    <a href="https://github.com/Crystian-Paz/MangaFinder">Link do Projeto</a>
+                </div>
+            </div>
+            <h1 class="criado">Site Criado por Jambrolhados</h1>
+        </div>
+    </footer>
     <script src="../Controller/registerController.js"></script>
 </body>
 </html>
