@@ -6,7 +6,7 @@
 }
 
 body{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://cdn.discordapp.com/attachments/1356623149516591154/1381044205324861563/imagem.png?ex=68461525&is=6844c3a5&hm=667b2539ab3fbcf55c73f7cbd4cc418643950f66d6ca062c8f1bef7410279b74&');
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../assets/backgroundMangafinder.jpg');
 }
 :root {
     --cor-header: #0D0D0D;

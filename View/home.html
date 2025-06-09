@@ -6,51 +6,76 @@
   <title>Busca de Mangás</title>
   <link rel="stylesheet" href="./styles/home.css" />
 </head>
+<script src="../Controller/headerController.js"></script>
 <body>
-  <header id="header">
+    <header id="header">
         <div class="headerBox">
             <div class="logo">  
                 <img src="./assets/mangafinderlogo.png" alt="">
                 <h1>MangáFinder</h1>
             </div>
-            <div class="links">
-                <ul>
+            <div class="links" id="navLinks">
+                <ul id="navList">
                     <li><a href="./home.html">Home</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                    <li><a href="./register.html">Registrar</a></li>
+                    <li><a href="./login.html" id="linkLogin">Login</a></li>
+                    <li><a href="./register.html" id="linkRegister">Registrar</a></li>
                 </ul>
             </div>
         </div>
-  </header>
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Digite o nome do mangá" />
-    <button onclick="searchMangas()">Buscar</button>
-  </div>
-
-  <div class="mangas" id="mangaContainer">
-    <!-- Mangás vão aparecer aqui -->
-  </div>
-  <footer>
-      <div class="footerbox">
-          <div class="conteudofooter">
-              <div class="sobre">
-                  <h1>Sobre Nós</h1>  
-                  <a href="https://github.com/Crystian-Paz"></a>
-                  <a href="https://github.com/Neoxepa">Perfil Guilherme</a>
-                  <a href="https://github.com/MHustenir">Perfil Matheus Hustenir</a>
-                  <a href="https://github.com/Mathezoarxxa">Perfil Matheus</a>
-                  <a href="https://github.com/Kaique-Lemos">Perfil Kaique</a>
-                  <a href="https://github.com/Kc1fer">Perfil Cauã</a>
-                  <a href="https://github.com/DEGUSTEBR">Perfil Bruno</a>
-              </div>
-              <div class="sobregit">
-                  <h1>Github</h1>
-                  <a href="https://github.com/Crystian-Paz/MangaFinder">Link do Projeto</a>
-              </div>
-          </div>
-          <h1 class="criado">Site Criado por Jambrolhados</h1>
-      </div>
-  </footer>
-  <script src="script.js"></script>
+    </header>
+    <div class="content">
+        <h1>Bem Vindo ao MangáFinder!</h1>
+        <img src="./assets/mangafinderlogo.png" alt="">
+        <h2>Aqui você encontrar seus Mangás Favoritos!</h2>
+        <button><a href="#busca">buscar</a></button>
+        <h3>Clique no botão acima para buscar o mangá</h3>
+    </div>
+    <div id="busca" class="card">
+        <div class="search-bar">
+            <h1 title="Nome completo do mangá">Digite o nome do Mangá</h1>
+            <div class="pesquisa">
+                <input type="text" id="searchInput" placeholder="Digite o nome do mangá" />
+                    <select id="genreSelect">
+                        <option value="all">Todos os Gêneros</option>
+                        <option value="action">Ação</option>
+                        <option value="adventure">Aventura</option>
+                        <option value="comedy">Comédia</option>
+                        <option value="drama">Drama</option>
+                        <option value="fantasy">Fantasia</option>
+                        <option value="horror">Terror</option>
+                        <option value="romance">Romance</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                    </select>
+                <button id="button" onclick="searchMangas()">buscar</button>
+            </div>
+        </div>
+    </div>
+    <div class="mangas" id="mangaContainer">
+    </div>
+    <div class="mostrarmais">
+        <button id="loadMoreBtn" onclick="searchMangas(true)">Mostrar Mais</button>
+    </div>
+    <footer>
+        <div class="footerbox">
+            <div class="conteudofooter">
+                <div class="sobre">
+                    <h1>Sobre Nós</h1>  
+                    <a href="https://github.com/Crystian-Paz"></a>
+                    <a href="https://github.com/Neoxepa">Perfil Guilherme</a>
+                    <a href="https://github.com/MHustenir">Perfil Matheus Hustenir</a>
+                    <a href="https://github.com/Mathezoarxxa">Perfil Matheus</a>
+                    <a href="https://github.com/Kaique-Lemos">Perfil Kaique</a>
+                    <a href="https://github.com/Kc1fer">Perfil Cauã</a>
+                    <a href="https://github.com/DEGUSTEBR">Perfil Bruno</a>
+                </div>
+                <div class="sobregit">
+                    <h1>Github</h1>
+                    <a href="https://github.com/Crystian-Paz/MangaFinder">Link do Projeto</a>
+                </div>
+            </div>
+            <h1 class="criado">Site Criado por Jambrolhados</h1>
+        </div>
+    </footer>
+    <script src="../Controller/homeController.js"></script>
 </body>
 </html>
