@@ -69,4 +69,60 @@
     });
 
     // faz funcionar quando a pagina ou abre ou é recarregada
-    window.onload = carregarDadosUsuario;
+    window.addEventListener('DOMContentLoaded', function () {
+    carregarDadosUsuario();
+    atualizarLinksHeader();
+
+    const btnEditar = document.getElementById('btnEditar');
+    const btnCancelar = document.getElementById('btnCancelar');
+    const btnSalvar = document.getElementById('btnSalvar');
+    const btnLogout = document.getElementById('btnLogout');
+
+    if (btnEditar) {
+        btnEditar.addEventListener('click', function () {
+            document.querySelector('.view-mode').style.display = 'none';
+            document.querySelector('.edit-mode').style.display = 'block';
+        });
+    }
+
+    if (btnCancelar) {
+        btnCancelar.addEventListener('click', function () {
+            document.querySelector('.view-mode').style.display = 'block';
+            document.querySelector('.edit-mode').style.display = 'none';
+        });
+    }
+
+    if (btnSalvar) {
+        btnSalvar.addEventListener('click', function () {
+            const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+            const dbClient = JSON.parse(localStorage.getItem('db_client')) || [];
+
+            const updatedUser = {
+                ...usuarioLogado,
+                name: document.getElementById('editNome').value.trim(),
+                user: document.getElementById('editUsuario').value.trim(),
+                country: document.getElementById('editPais').value.trim(),
+                email: document.getElementById('editEmail').value.trim()
+            };
+
+            const userIndex = dbClient.findIndex(u => u.email === usuarioLogado.email);
+            if (userIndex !== -1) {
+                dbClient[userIndex] = updatedUser;
+                localStorage.setItem('db_client', JSON.stringify(dbClient));
+            }
+
+            localStorage.setItem('usuarioLogado', JSON.stringify(updatedUser));
+            carregarDadosUsuario();
+            document.querySelector('.view-mode').style.display = 'block';
+            document.querySelector('.edit-mode').style.display = 'none';
+            alert("Perfil atualizado com sucesso!");
+        });
+    }
+
+    if (btnLogout) {
+        btnLogout.addEventListener('click', function () {
+            localStorage.removeItem('usuarioLogado');
+            window.location.href = './login.html';
+        });
+    }
+});
