@@ -64,6 +64,7 @@ body {
     color: black;
     border-radius: 0.2rem;
     padding: 0.2rem;
+    transition: 0.3s;
 }
 
 .links ul{

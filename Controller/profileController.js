@@ -35,6 +35,12 @@
         const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
         const dbClient = JSON.parse(localStorage.getItem('db_client')) || [];
 
+        //logout
+        document.getElementById('btnLogout').addEventListener('click', function () {
+        localStorage.removeItem('usuarioLogado');
+         window.location.href = './login.html'; // redireciona para a tela de login
+});
+
 
         // Atualiza os dados e exibe os dados atualizados
         const updatedUser = {
