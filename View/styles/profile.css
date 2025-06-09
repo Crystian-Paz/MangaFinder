@@ -82,8 +82,18 @@ button:hover {
     display: flex;
     margin-top: 20px;
 }
-    
-    
+
+#btnLogout {
+    background-color: crimson;
+    margin-top: 10px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#btnLogout:hover {
+    background-color: darkred;
+}
 
 :root {
     --cor-header: #0D0D0D;
